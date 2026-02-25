@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Tracker</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌦️ Weather Tracker</h1>
+      <p class="subtitle">Real-time weather • No API Key</p>
+
+      <form method="POST">
+        <input type="text" name="city" placeholder="Enter city name" />
+        <button type="submit">Get Weather</button>
+      </form>
+
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %} {% if weather %}
+      <div class="card">
+        <h2>{{ weather.city }}</h2>
+        <p class="temp">{{ weather.temp }}°C</p>
+        <p class="condition">{{ weather.condition }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
