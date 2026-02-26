@@ -55,3 +55,6 @@ python app.py
 
 http://127.0.0.1:5000
 
+Screenshots
+
+> Screenshots of the Weather Tracker Web App will be added soon.
